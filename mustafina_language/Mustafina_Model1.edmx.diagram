@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="f96114658e474f3e8b3207f7f51b4bdb" Name="Diagram1">
+        <EntityTypeShape EntityType="Mustafina_LanguageModel.Client" Width="1.5" PointX="0.75" PointY="7.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Mustafina_LanguageModel.ClientService" Width="1.5" PointX="3" PointY="9.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Mustafina_LanguageModel.DocumentByService" Width="1.5" PointX="5.25" PointY="10" IsExpanded="true" />
+        <EntityTypeShape EntityType="Mustafina_LanguageModel.Gender" Width="1.5" PointX="1.5" PointY="13.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Mustafina_LanguageModel.Manufacturer" Width="1.5" PointX="0.75" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="Mustafina_LanguageModel.Product" Width="1.5" PointX="3" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Mustafina_LanguageModel.ProductPhoto" Width="1.5" PointX="5.25" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="Mustafina_LanguageModel.ProductSale" Width="1.5" PointX="5.25" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Mustafina_LanguageModel.Service" Width="1.5" PointX="0.75" PointY="16.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Mustafina_LanguageModel.ServicePhoto" Width="1.5" PointX="3" PointY="17" IsExpanded="true" />
+        <EntityTypeShape EntityType="Mustafina_LanguageModel.Tag" Width="1.5" PointX="5.75" PointY="7.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Mustafina_LanguageModel.TagOfClient" Width="1.5" PointX="8" PointY="7.375" IsExpanded="true" />
+        <AssociationConnector Association="Mustafina_LanguageModel.FK_Client_Gender" ManuallyRouted="false" />
+        <AssociationConnector Association="Mustafina_LanguageModel.FK_ClientService_Client" ManuallyRouted="false" />
+        <AssociationConnector Association="Mustafina_LanguageModel.FK_ClientService_Service" ManuallyRouted="false" />
+        <AssociationConnector Association="Mustafina_LanguageModel.FK_DocumentByService_ClientService" ManuallyRouted="false" />
+        <AssociationConnector Association="Mustafina_LanguageModel.FK_ProductSale_ClientService" ManuallyRouted="false" />
+        <AssociationConnector Association="Mustafina_LanguageModel.FK_Product_Manufacturer" ManuallyRouted="false" />
+        <AssociationConnector Association="Mustafina_LanguageModel.FK_ProductPhoto_Product" ManuallyRouted="false" />
+        <AssociationConnector Association="Mustafina_LanguageModel.FK_ProductSale_Product" ManuallyRouted="false" />
+        <AssociationConnector Association="Mustafina_LanguageModel.FK_ServicePhoto_Service" ManuallyRouted="false" />
+        <AssociationConnector Association="Mustafina_LanguageModel.FK_TagOfClient_Tag" ManuallyRouted="false" />
+        <AssociationConnector Association="Mustafina_LanguageModel.AttachedProduct" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
