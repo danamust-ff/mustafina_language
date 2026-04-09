@@ -11,7 +11,9 @@ namespace mustafina_language
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.IO;
+    using System.Linq;
+
     public partial class Client
     {
         public Client()
@@ -29,7 +31,57 @@ namespace mustafina_language
         public Nullable<System.DateTime> Birthday { get; set; }
         public string Email { get; set; }
         public System.DateTime RegistrationDate { get; set; }
-    
+
+
+        public int VisitCount
+        {
+            get
+            {
+                return ClientService.Count;
+            }
+        }
+
+
+        public DateTime? LastVisitDate
+        {
+            get
+            {
+                if (ClientService == null || ClientService.Count == 0)
+                    return null;
+
+                return ClientService.Max(p => p.StartTime);
+            }
+        }
+
+        public string LastVisit
+        {
+            get
+            {
+                if (ClientService == null || ClientService.Count == 0)
+                {
+                    return "нет";
+                }
+
+                var maxStartTime = ClientService.Max(p => p.StartTime);
+                return maxStartTime.ToString("dd.MM.yyyy");
+            }
+        }
+
+        public string ClientPhotoPath
+        {
+            get
+            {
+                if (string.IsNullOrEmpty(PhotoPath))
+                    return null;
+
+                // Если PhotoPath уже содержит полный путь, используем его
+                string fullPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, PhotoPath);
+
+                // Если файл существует – возвращаем путь, иначе null
+                return File.Exists(fullPath) ? fullPath : null;
+            }
+        }
+
         public virtual Gender Gender { get; set; }
         public virtual ICollection<ClientService> ClientService { get; set; }
     }
